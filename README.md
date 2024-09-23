@@ -3,4 +3,8 @@
 ```javascript
 npm install --save-dev @trivago/prettier-plugin-sort-imports
 npm install -D prettier
+
+npm i express
+
+npm i -D colors
 ```
