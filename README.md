@@ -7,4 +7,8 @@ npm install -D prettier
 npm i express
 
 npm i -D colors
+
+npm i dotenv
+
+npm i -D morgan nodemon
 ```
