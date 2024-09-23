@@ -15,5 +15,9 @@
     "url": "https://github.com/Inna-B10/exercise-scheduler-server/issues"
   },
   "homepage": "https://github.com/Inna-B10/exercise-scheduler-server#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier": "^3.3.3"
+  }
 }
