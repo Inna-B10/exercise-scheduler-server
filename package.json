@@ -1,0 +1,19 @@
+{
+  "name": "exercise-scheduler-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inna-B10/exercise-scheduler-server.git"
+  },
+  "author": "[alekinna]",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Inna-B10/exercise-scheduler-server/issues"
+  },
+  "homepage": "https://github.com/Inna-B10/exercise-scheduler-server#readme",
+  "description": ""
+}
