@@ -15,12 +15,16 @@ npm i -D morgan nodemon
 npm i prisma pg
 
 npm i express-async-handler
+
+npm i argon2
+
+npm i jsonwebtoken
 ```
 
 ### TODO:
 
 - [x] Async error handling for method (express-async-handler)
 - [x] App.use notFound, errorHandler
-- [ ] generate token (jsonwebtoken)
-- [ ] user registration
-- [ ] user login
+- [x] generate token (jsonwebtoken)
+- [x] user registration
+- [ ] user  login
