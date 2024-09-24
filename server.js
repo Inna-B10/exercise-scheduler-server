@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import morgan from 'morgan'
 import authRoutes from './app/auth/auth.routes.js'
+import { prisma } from './app/prisma.js'
 
 dotenv.config()
 
@@ -23,3 +24,11 @@ async function main() {
 	)
 }
 main()
+	.then(async () => {
+		await prisma.$disconnect()
+	})
+	.catch(async e => {
+		console.error(e)
+		await prisma.$disconnect()
+		process.exit(1)
+	})

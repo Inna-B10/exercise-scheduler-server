@@ -2,6 +2,7 @@ node_modules
 .gitignore
 .prettierrc
 .env
+migrations
 
 package.json
 package-lock.json
