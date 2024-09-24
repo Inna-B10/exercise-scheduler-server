@@ -19,7 +19,7 @@ model User {
   updatedAt DateTime  @updatedAt @map("updated_at")
 
   email     String    @unique
-  name      String
+  nickname  String
   password  String
   images    String[]
 }
