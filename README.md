@@ -27,4 +27,6 @@ npm i jsonwebtoken
 - [x] App.use notFound, errorHandler
 - [x] generate token (jsonwebtoken)
 - [x] user registration
-- [ ] user  login
+- [x] user  login
+- [ ] exercise model
+- [ ] exercise endpoint
