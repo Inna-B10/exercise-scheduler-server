@@ -9,9 +9,11 @@ import {
 
 const router = express.Router()
 
-router.route('/').post(protect, createNewExercise)
-router.route('/').get(protect, getExercises)
-router.route('/:id').put(protect, updateExercise)
-router.route('/:id').delete(protect, deleteExercise)
+router.route('/').post(protect, createNewExercise).get(protect, getExercises)
+
+router
+	.route('/:id')
+	.put(protect, updateExercise)
+	.delete(protect, deleteExercise)
 
 export default router

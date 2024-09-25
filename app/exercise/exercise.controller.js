@@ -37,7 +37,7 @@ export const getExercises = asyncHandler(async (req, res) => {
 
 export const updateExercise = asyncHandler(async (req, res) => {
 	const { name, times, iconPath } = req.body
-	console.log(req.body)
+
 	try {
 		const exercise = await prisma.exercise.update({
 			where: {
