@@ -28,7 +28,13 @@ npm i jsonwebtoken
 - [x] generate token (jsonwebtoken)
 - [x] user registration
 - [x] user  login
-- [x] exercise model
+- [x] exercise and workout models
 - [x] exercise endpoint, create new exercise
-- [ ] update exercise
-- [ ] delete exercise
+- [x] update exercise
+- [x] delete exercise
+- [x] workout endpoint, create new workout
+- [x] update workout
+- [x] delete workout
+- [ ] workout log model
+- [ ] exercise log model
+
