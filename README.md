@@ -35,6 +35,10 @@ npm i jsonwebtoken
 - [x] workout endpoint, create new workout
 - [x] update workout
 - [x] delete workout
-- [ ] workout log model
-- [ ] exercise log model
+- [x] workout log model
+- [x] exercise log model
+- [x] create endpoint for logs
+- [ ] create new log for exercise
+- [ ] get log
+- [ ] update log isComplete
 
