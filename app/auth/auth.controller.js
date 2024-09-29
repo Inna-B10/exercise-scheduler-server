@@ -15,14 +15,19 @@ export const authUser = asyncHandler(async (req, res) => {
 			email
 		}
 	})
-	const isValidPassword = await verify(user.password, password)
+	if (user) {
+		const isValidPassword = await verify(user.password, password)
 
-	if (user && isValidPassword) {
-		const token = generateToken(user.id)
-		res.json({ user, token })
+		if (isValidPassword) {
+			const token = generateToken(user.id)
+			res.json({ user, token })
+		} else {
+			res.status(401)
+			throw new Error('The login information provided is incorrect')
+		}
 	} else {
 		res.status(401)
-		throw new Error('Email and/or password are not correct')
+		throw new Error('The login information provided is incorrect')
 	}
 	res.json(user)
 })

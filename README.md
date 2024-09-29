@@ -19,6 +19,8 @@ npm i express-async-handler
 npm i argon2
 
 npm i jsonwebtoken
+
+npm i cors
 ```
 
 ### TODO:

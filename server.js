@@ -1,4 +1,5 @@
 import 'colors'
+import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
 import morgan from 'morgan'
@@ -17,6 +18,7 @@ const app = express()
 async function main() {
 	if (process.env.NODE_ENV === 'development') app.use(morgan('dev'))
 
+	app.use(cors())
 	app.use(express.json())
 
 	const _dirname = path.resolve()
