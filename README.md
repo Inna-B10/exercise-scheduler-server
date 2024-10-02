@@ -47,11 +47,12 @@ npm i cors
   - [x] get log (include if exist previous sets to compare)
   - [x] update log (time/set) 
   - [x] is exercise completed
-- [ ] create endpoints for workout log
-- [ ] workout log:
-  - [ ] create new log
-  - [ ] get log
-  - [ ] update log 
+- [x] create endpoints for workout log
+- [x] workout log:
+  - [x] create new log
+  - [x] get log
+  - [x] update log isCompleted 
+- [ ] get general statistic
  
 
 

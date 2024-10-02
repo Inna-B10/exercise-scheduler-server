@@ -19,7 +19,7 @@ export const createNewExercise = asyncHandler(async (req, res) => {
 })
 
 //@desc 	Update exercise
-//@route	PUT /api/exercises/:id
+//@route	PUT /api/exercises/:exerciseId
 //@access	Private
 
 export const updateExercise = asyncHandler(async (req, res) => {
@@ -43,7 +43,7 @@ export const updateExercise = asyncHandler(async (req, res) => {
 	}
 })
 //@desc 	Delete exercise
-//@route	Delete /api/exercises/:id
+//@route	Delete /api/exercises/:exerciseId
 //@access	Private
 
 export const deleteExercise = asyncHandler(async (req, res) => {

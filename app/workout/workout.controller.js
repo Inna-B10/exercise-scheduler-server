@@ -20,7 +20,7 @@ export const createNewWorkout = asyncHandler(async (req, res) => {
 })
 
 //@desc 	Get workout
-//@route	GET /api/workouts/:id
+//@route	GET /api/workouts/:workoutId
 //@access	Private
 
 export const getWorkout = asyncHandler(async (req, res) => {
@@ -58,7 +58,7 @@ export const getAllWorkouts = asyncHandler(async (req, res) => {
 })
 
 //@desc 	Update workout
-//@route	PUT /api/workouts/:id
+//@route	PUT /api/workouts/:workoutId
 //@access	Private
 
 export const updateWorkout = asyncHandler(async (req, res) => {
@@ -83,7 +83,7 @@ export const updateWorkout = asyncHandler(async (req, res) => {
 	}
 })
 //@desc 	Delete workout
-//@route	Delete /api/workouts/:id
+//@route	Delete /api/workouts/:workoutId
 //@access	Private
 
 export const deleteWorkout = asyncHandler(async (req, res) => {
