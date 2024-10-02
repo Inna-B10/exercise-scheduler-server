@@ -1,5 +1,7 @@
 # Workout APP - server side
 
+### Express + Prisma
+
 ```javascript
 npm install --save-dev @trivago/prettier-plugin-sort-imports
 npm install -D prettier
@@ -39,8 +41,17 @@ npm i cors
 - [x] delete workout
 - [x] workout log model
 - [x] exercise log model
-- [x] create endpoint for logs
-- [ ] create new log for exercise
-- [ ] get log
-- [ ] update log isComplete
+- [x] create endpoints for exercise log
+- [x] exercise log:
+  - [x] create new log
+  - [x] get log (include if exist previous sets to compare)
+  - [x] update log (time/set) 
+  - [x] is exercise completed
+- [ ] create endpoints for workout log
+- [ ] workout log:
+  - [ ] create new log
+  - [ ] get log
+  - [ ] update log 
+ 
+
 
