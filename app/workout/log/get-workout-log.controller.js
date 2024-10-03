@@ -17,7 +17,7 @@ export const getWorkoutLog = asyncHandler(async (req, res) => {
 					exercises: true
 				}
 			},
-			exerciseLog: {
+			exerciseLogs: {
 				orderBy: {
 					id: 'asc'
 				},

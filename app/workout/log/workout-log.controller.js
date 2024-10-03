@@ -33,7 +33,7 @@ export const createNewWorkoutLog = asyncHandler(async (req, res) => {
 					id: workoutId
 				}
 			},
-			exerciseLog: {
+			exerciseLogs: {
 				create: workout.exercises.map(exercise => ({
 					user: {
 						connect: {
@@ -55,7 +55,7 @@ export const createNewWorkoutLog = asyncHandler(async (req, res) => {
 			}
 		},
 		include: {
-			exerciseLog: {
+			exerciseLogs: {
 				include: {
 					times: true
 				}

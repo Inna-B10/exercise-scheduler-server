@@ -36,8 +36,7 @@ model Exercise {
   times         Int
   iconPath      String          @map("icon_path")
 
-  exerciseLog   ExerciseLog?    @relation(fields: [exerciseLogId], references: [id])
-  exerciseLogId Int?            @map("exercise_log_id")
+  exerciseLogs   ExerciseLog[]
 
   workouts      Workout[]
 }
@@ -64,10 +63,12 @@ model ExerciseLog {
 
   isCompleted  Boolean         @default(false) @map("is_completed")
   times        ExerciseTime[]
+
   user         User?           @relation(fields: [userId],references: [id])
   userId       Int?            @map("user_id")
 
-  exercise     Exercise[]
+  exercise     Exercise?       @relation(fields: [exerciseId], references: [id])
+  exerciseId   Int?             @map("exercise_id")
 
   workoutLog   WorkoutLog?     @relation(fields: [workoutLogId], references: [id])
   workoutLogId Int?            @map("workout_log_id")
@@ -99,7 +100,7 @@ model WorkoutLog {
   user        User?     @relation(fields: [userId], references: [id])
   userId      Int?      @map("user_id")
 
-  exerciseLog ExerciseLog[]
+  exerciseLogs ExerciseLog[]
   
   @@map("Workout_log")
 }
