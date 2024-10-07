@@ -20,6 +20,10 @@
   "description": "",
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/morgan": "^1.9.9",
     "colors": "^1.4.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.7",
