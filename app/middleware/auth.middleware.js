@@ -22,7 +22,7 @@ export const protect = asyncHandler(async (req, res, next) => {
 			req.user = userFound
 			next()
 		} else {
-			req.status(401)
+			res.status(401)
 			throw new Error('Not authorized, token failed')
 		}
 	}

@@ -37,6 +37,7 @@ export const authUser = asyncHandler(async (req, res) => {
 //@access   Public
 export const registerUser = asyncHandler(async (req, res) => {
 	const { email, password, nickname } = req.body
+
 	const isHaveUser = await prisma.user.findUnique({
 		where: {
 			email: email
@@ -52,11 +53,12 @@ export const registerUser = asyncHandler(async (req, res) => {
 		data: {
 			email,
 			password: await hash(password),
-			nickname
+			nickname,
+			images: ['images/before.jpg', 'images/after.jpg']
 		},
 		select: UserFields
 	})
 
 	const token = generateToken(user.id)
-	res.json(user, token)
+	res.json({ user, token })
 })
