@@ -52,7 +52,7 @@ npm i cors
   - [x] create new log
   - [x] get log
   - [x] update log isCompleted 
-- [ ] get general statistic
+- [x] get user statistic
  
 
 
