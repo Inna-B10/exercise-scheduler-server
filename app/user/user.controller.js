@@ -13,6 +13,10 @@ export const getUserProfile = asyncHandler(async (req, res) => {
 		},
 		select: UserFields
 	})
+	if (!user) {
+		res.status(404)
+		return res.json({ message: 'User not found' })
+	}
 
 	const countExerciseTimesCompleted = await prisma.exerciseLog.count({
 		where: {

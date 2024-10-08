@@ -9,25 +9,28 @@ export const protect = asyncHandler(async (req, res, next) => {
 	if (req.headers.authorization?.startsWith('Bearer')) {
 		token = req.headers.authorization.split(' ')[1]
 
-		const decoded = jwt.verify(token, process.env.JWT_SECRET)
+		try {
+			const decoded = jwt.verify(token, process.env.JWT_SECRET)
 
-		const userFound = await prisma.user.findUnique({
-			where: {
-				id: decoded.userId
-			},
-			select: UserFields
-		})
+			const userFound = await prisma.user.findUnique({
+				where: {
+					id: decoded.userId
+				},
+				select: UserFields
+			})
 
-		if (userFound) {
+			if (!userFound) {
+				res.status(401)
+				return res.json({ message: 'Not authorized, token failed' })
+			}
 			req.user = userFound
 			next()
-		} else {
+		} catch (error) {
 			res.status(401)
-			throw new Error('Not authorized, token failed')
+			return res.json({ message: 'Not authorized, token failed' })
 		}
-	}
-	if (!token) {
+	} else {
 		res.status(401)
-		throw new Error('Not authorized, token missing')
+		return res.json({ message: 'Not authorized, token missing' })
 	}
 })

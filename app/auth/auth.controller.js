@@ -20,14 +20,17 @@ export const authUser = asyncHandler(async (req, res) => {
 
 		if (isValidPassword) {
 			const token = generateToken(user.id)
+			console.log({ user, token })
 			res.json({ user, token })
 		} else {
 			res.status(401)
-			throw new Error('The login information provided is incorrect')
+			return res.json({
+				message: 'The login information provided is incorrect'
+			})
 		}
 	} else {
 		res.status(401)
-		throw new Error('The login information provided is incorrect')
+		return res.json({ message: 'The login information provided is incorrect' })
 	}
 	res.json(user)
 })
@@ -46,7 +49,7 @@ export const registerUser = asyncHandler(async (req, res) => {
 
 	if (isHaveUser) {
 		res.status(400)
-		throw new Error('User already exists ')
+		return res.json({ message: 'User already exists' })
 	}
 
 	const user = await prisma.user.create({
