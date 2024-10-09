@@ -20,7 +20,6 @@ export const authUser = asyncHandler(async (req, res) => {
 
 		if (isValidPassword) {
 			const token = generateToken(user.id)
-			console.log({ user, token })
 			res.json({ user, token })
 		} else {
 			res.status(401)
